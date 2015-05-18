@@ -33,6 +33,7 @@
     "expect": false,
     "_": true,
     "console": true,
-    "$": true
+    "$": true,
+    "Highcharts": true
   }
 }
