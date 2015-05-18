@@ -1,0 +1,10 @@
+<!doctype html><html ng-app="tnstats"><head><meta charset="utf-8"><title>Tamil Nadu Statistical Hand Book - 2014</title><meta name="description" content=""><meta name="viewport" content="width=device-width"><link rel="stylesheet" href="styles/vendor-192f6552.css"><link rel="stylesheet" href="styles/app-a4276726.css"></head><body><!--[if lt IE 10]>
+ <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+ <![endif]--><div ng-controller="MainCtrl"><div ng-include="'app/components/navbar/navbar.html'"></div><div class="content clearfix"><div ng-include="'app/components/sidebar/sidebar.html'"></div><div class="mainContent container-fluid"><ol class="breadcrumb"><li><a href="#/">Home</a></li><li ng-show="current.category"><a ng-href="#/category/{{current.category.id}}">{{current.category.name}}</a></li><li class="active" ng-show="current.subCategory">{{current.subCategory.name}}</li></ol><div class="row main-row" ui-view=""></div><hr><div class="footer"><p>With ♥ from <a href="https://twitter.com/Swiip">@Swiip</a></p></div></div></div></div><script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script><script src="scripts/vendor-3b3c3fe2.js"></script><script src="scripts/app-423506b5.js"></script></body></html>
