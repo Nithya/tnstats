@@ -1,0 +1,21 @@
+<section ng-controller="SidebarCtrl" class="sidebar pull-left well">
+  <ul class="navigation">
+    <li>
+      <h2>Categories</h2>
+    </li>
+    <li ng-repeat="category in categories track by $index" class="pointer">
+      <span class="glyphicon glyphicon-triangle-right"></span>
+      <span ng-class="{bold: current.category.id === category.id}" ng-click="setCategory(category)">
+        {{ category.name }}
+      </span>
+      <ul ng-show="current.category.id === category.id">
+        <li ng-repeat="subCategory in subCategories[$index] track by $index">
+          <span class="glyphicon glyphicon-triangle-right" ng-show="current.subCategory.id === subCategory.id"></span>
+          <span ng-class="{bold: current.subCategory.id === subCategory.id}" ng-click="setSubCategory(subCategory)">
+            {{ subCategory.name }}
+          </span>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</section>

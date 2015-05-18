@@ -1,0 +1,5 @@
+<div ng-controller="CategoryCtrl">
+  <div class="col-md-2 card pointer" ng-repeat="subCategory in filterdSubCategories track by $index" ng-click="setSubCategory(subCategory)">
+    <div class="text">{{subCategory.name}}</div>
+  </div>
+</div>
