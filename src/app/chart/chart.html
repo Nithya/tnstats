@@ -1,10 +1,44 @@
 <div ng-controller="ChartCtrl">
   <tabset justified="true">
-    <tab heading="Table">
-      <div>Data table goes here</div>
-    </tab>
     <tab heading="Chart">
-      <div class="chart">Chart goes here</div>
+      <accordion close-others="true">
+        <accordion-group heading="Population by Religion (Tamil Nadu)" is-open="true">
+          <div class="chart"></div>
+        </accordion-group>
+        <accordion-group heading="Population by Religion (All India)">
+          <div class="chart1"></div>
+        </accordion-group>
+        <accordion-group heading="Variation Since 1991-2001">
+          <div class="chart2"></div>
+        </accordion-group>
+      </accordion>
+    </tab>
+    <tab heading="Table">
+      <div>
+        <table class="w100" id="dataTable">
+          <thead>
+            <tr>
+              <td rowspan="2">Religion</td>
+              <td rowspan="2">Persons in Tamil Nadu</td>
+              <td rowspan="2">Variation Since 1991-2001</td>
+              <td colspan="2">Percentage</td>
+            </tr>
+            <tr>
+              <td>Tamil Nadu</td>
+              <td>All India</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="row in data track by $index">
+              <td>{{row.Religion}}</td>
+              <td>{{row['Persons in Tamil Nadu'] | number}}</td>
+              <td>{{row['Variation Since 1991-2001'] | number}}</td>
+              <td>{{row['Percentage Tamil Nadu']}}</td>
+              <td>{{row['All India']}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </tab>
   </tabset>
 </div>
